@@ -21,7 +21,7 @@ async function getData() {
 
    
     nasaItems = res.data.collection.items
-    nasaItems = nasaItems.slice(0, 10)
+    nasaItems = nasaItems.slice(0, 30)
     nasaItems.forEach((item) => {
       let li = document.createElement("li");
       let img = document.createElement("img")
