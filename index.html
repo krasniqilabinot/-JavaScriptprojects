@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Nasa</title>
-</head>
+  </head>
 
-<body>
-    <div id="search"> <input type="text" placeholder="start year" id="start_year" value="2021">
-        <input type="text" placeholder="end data" id="end_year" value="2022">
-        <button id="searchBtn">Search</button></div>
-   
+  <body>
+    <div id="search">
+      <input
+        type="text"
+        placeholder="start year"
+        id="start_year"
+        value="2021"
+      />
+      <input type="text" placeholder="end data" id="end_year" value="2022" />
+      <button id="searchBtn">Search</button>
+    </div>
+
     <div class="list-content">
-        <ul id="myList"></ul>
-        <div id="details"></div>
+      <ul id="myList"></ul>
+    </div>
+    <div id="detailsModal" class="modal">
+        <div class="modal-container">
+          <i id="closeIcon" class="fa fa-times" aria-hidden="true"></i>
+          <div id="details">
+          </div>
+        </div>
     </div>
     <div id="pagination" class="container d-flex justify-content-center">
-        <a href="#" id="btn_prev">Prev</a>
-        &nbsp;|&nbsp;
-        <a href="#" id="btn_next">Next</a>
-    
-        <!-- <span id="page"></span> -->
+      <a href="#" id="btn_prev">Prev</a>
+      &nbsp;|&nbsp;
+      <a href="#" id="btn_next">Next</a>
 
-    </div>
-    <div id="nasa">
-        <!-- <input type="number" min="1900" max="2099" step="1" value="2016" /> -->
+      <!-- <span id="page"></span> -->
     </div>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
